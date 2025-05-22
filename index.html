@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulp Cthulhu Character Creator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pulp Cthulhu Character Creator</h1>
+    
+    <section>
+      <label>Character Name: <input type="text" id="charName" /></label>
+    </section>
+
+    <section>
+      <h2>Choose Stat Generation Method</h2>
+      <label><input type="radio" name="statMethod" value="roll" checked /> Roll Dice</label>
+      <label><input type="radio" name="statMethod" value="pointBuy" /> Point Buy</label>
+    </section>
+
+    <section id="stats">
+      <h2>Attributes</h2>
+      <div class="stat-group">
+        <label>STR: <input type="number" id="str" /></label>
+        <label>DEX: <input type="number" id="dex" /></label>
+        <label>INT: <input type="number" id="int" /></label>
+        <label>CON: <input type="number" id="con" /></label>
+        <label>APP: <input type="number" id="app" /></label>
+        <label>POW: <input type="number" id="pow" /></label>
+        <label>SIZ: <input type="number" id="siz" /></label>
+        <label>EDU: <input type="number" id="edu" /></label>
+      </div>
+    </section>
+
+    <section id="derived">
+      <h2>Derived Stats</h2>
+      <p>Hit Points: <span id="hp">-</span></p>
+      <p>Sanity: <span id="sanity">-</span></p>
+      <p>Luck: <span id="luck">-</span></p>
+    </section>
+
+    <section id="extras">
+      <h2>Pulp Features</h2>
+      <label>Archetype:
+        <select id="archetype">
+          <option value="">--Choose--</option>
+          <option value="adventurer">Adventurer</option>
+          <option value="egghead">Egghead</option>
+          <option value="flapper">Flapper</option>
+          <!-- more to be added -->
+        </select>
+      </label>
+      <label>Talents: <textarea id="talents"></textarea></label>
+      <label>Psychic Powers: <textarea id="psychic"></textarea></label>
+    </section>
+
+    <section>
+      <h2>Backstory & Possessions</h2>
+      <label>Possessions: <textarea id="possessions"></textarea></label>
+      <label>Background: <textarea id="background"></textarea></label>
+    </section>
+
+    <button onclick="generateCharacter()">Generate Character</button>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
